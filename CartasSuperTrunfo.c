@@ -20,7 +20,6 @@ int main() {
     float densidadepopulacional1;
     double PIB1;
     double pibpercapita1;
-    double superpoder1;
 
     //carta 02
     char codigocarta2[3];
@@ -32,7 +31,6 @@ int main() {
     float densidadepopulacional2;
     double PIB2;
     double pibpercapita2;
-    double superpoder2;
 
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -65,6 +63,10 @@ int main() {
     printf("Digite o número de pontos turísticos: \n");
     scanf("%d", &numerodepontosturisticos1);
 
+// Calculos - densidade populacional e PIB per Capita CARTA 1;
+    densidadepopulacional1 = populacao1 / area1;
+    pibpercapita1 = PIB1 / populacao1;
+
 
 // Carta 2;
     printf("Digite o COD da carta 2: \n");
@@ -88,6 +90,10 @@ int main() {
     printf("Digite o número de pontos turísticos: \n");
     scanf("%d", &numerodepontosturisticos2);
 
+// Calculos - densidade populacional, PIB per Capita e super poder CARTA 2;
+    densidadepopulacional2 = populacao2 / area2;
+    pibpercapita2 = PIB2 / populacao2;
+
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
@@ -102,6 +108,8 @@ int main() {
     printf("Área: %.1f km²\n", area1);
     printf("PIB: R$ %.2lf\n", PIB1);
     printf("Número de pontos turísticos: %d\n", numerodepontosturisticos1);
+    printf("Densidade populacional: %.2f hab/km²\n", densidadepopulacional1);
+    printf("PIB per Capita: R$ %.2lf\n", pibpercapita1);
 
     printf("\n>>> CARTA2 <<<\n");
     printf("COD: %s\n", codigocarta2);
@@ -111,6 +119,8 @@ int main() {
     printf("Área: %.1f km²\n", area2);
     printf("PIB: R$ %.2lf\n", PIB2);
     printf("Número de pontos turísticos: %d\n", numerodepontosturisticos2);
+    printf("Densidade populacional: %.2f hab/km²\n", densidadepopulacional2);
+    printf("PIB per Capita: R$ %.2lf\n", pibpercapita2);
 
     printf("\n");
 
