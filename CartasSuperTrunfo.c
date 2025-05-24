@@ -10,6 +10,12 @@ int main() {
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
 
+// Definição das variáveis gerais:
+    double densidadevencedora;
+    double comparacao;
+    double superpoder1;
+    double superpoder2;
+
 //carta 01
     char codigocarta1[3];
     char estado1[60];
@@ -123,6 +129,90 @@ int main() {
     printf("PIB per Capita: R$ %.2lf\n", pibpercapita2);
 
     printf("\n");
+
+//Comparação da carta vencedora;
+    printf("Comparação das CARTAS\n");
+
+    printf("\nPOPULAÇÃO: ");
+     if (populacao1 > populacao2)
+    {
+        printf("A CARTA 1 É A VENCEDORA! (1)\n");
+    } else if (populacao1 < populacao2)
+    {
+        printf("A CARTA 2 É A VENCEDORA! (0)\n");
+    } else {
+        printf("EMPATE!!\n");
+    }
+
+    printf("ÁREA: ");
+    if (area1 > area2)
+    {
+        printf("A CARTA 1 É A VENCEDORA! (1)\n");
+    } else if (area1 < area2)
+    {
+        printf("A CARTA 2 É A VENCEDORA! (0)\n");
+    } else {
+        printf("EMPATE!!\n");
+
+}
+
+    printf("PIB: ");
+    if (PIB1 > PIB2)
+    {
+        printf("A CARTA 1 É A VENCEDORA! (1)\n");
+    } else if (PIB1 < PIB2)
+    {
+        printf("A CARTA 2 É A VENCEDORA! (0)\n");
+    } else {
+        printf("EMPATE!!\n");
+}
+
+    printf("PONTOS TURÍSTICOS: ");
+    if (numerodepontosturisticos1 > numerodepontosturisticos2)
+    {
+        printf("A CARTA 1 É A VENCEDORA! (1)\n");
+    } else if (numerodepontosturisticos1 < numerodepontosturisticos2)
+    {
+        printf("A CARTA 2 É A VENCEDORA! (0)\n");
+    } else {
+        printf("EMPATE!!\n");
+}
+
+    printf("DENSIDADE POPULACIONAL: ");
+    if (densidadepopulacional1 < densidadepopulacional2)
+    {
+        printf("A CARTA 1 É A VENCEDORA! (1)\n");
+    } else if (densidadepopulacional1 > densidadepopulacional2)
+    {
+        printf("A CARTA 2 É A VENCEDORA! (0)\n");
+    } else {
+        printf("EMPATE!!\n");
+}
+
+printf("PIB PER CAPTA: ");
+    if (pibpercapita1 > pibpercapita2)
+    {
+        printf("A CARTA 1 É A VENCEDORA! (1)\n");
+    } else if (pibpercapita1 < pibpercapita2)
+    {
+        printf("A CARTA 2 É A VENCEDORA! (0)\n");
+    } else {
+        printf("EMPATE!!\n");
+}        
+
+printf("SUPER PODER: ");
+    if (superpoder1 > superpoder2)
+    {
+        printf("A CARTA 1 É A VENCEDORA! (1)\n");
+    } else if (superpoder1 < superpoder2)
+    {
+        printf("A CARTA 2 É A VENCEDORA! (0)\n");
+    } else {
+        printf("EMPATE!!\n");
+
+    printf("\n");
+}   
+
 
     return 0;
 }
