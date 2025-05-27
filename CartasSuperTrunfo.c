@@ -78,7 +78,7 @@ int main() {
     {
         superpoder1 = (double) soma1 + densidadepopulacional1;
     } else {
-        superpoder1 = (double) soma1 - densidadepopulacional1;
+        superpoder1 = (double) soma1;
     }
 
 
@@ -114,7 +114,7 @@ int main() {
     {
         superpoder2 = (double) soma2 + densidadepopulacional2;
     } else {
-        superpoder2 = (double) soma2 - densidadepopulacional2;
+        superpoder2 = (double) soma2;
     }
 
 
