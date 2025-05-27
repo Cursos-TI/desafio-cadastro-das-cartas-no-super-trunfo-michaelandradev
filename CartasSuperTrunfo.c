@@ -74,6 +74,8 @@ int main() {
     pibpercapita1 = (double) PIB1 / populacao1;
     soma1 = (float) populacao1 + area1 + PIB1 + numerodepontosturisticos1 + pibpercapita1;
 
+// Calculo super poder: "se densidade populacional 1 for menor que a densidade populacional 2" o valor da densidade é somado ao super poder da carta 1, caso contrario, é subtraído.
+
     if (densidadepopulacional1 < densidadepopulacional2)
     {
         superpoder1 = (float) soma1 + densidadepopulacional1;
@@ -109,6 +111,8 @@ int main() {
     densidadepopulacional2 = (float) populacao2 / area2;
     pibpercapita2 = (double) PIB2 / populacao2;
     soma2 = (float) populacao2 + area2 + PIB2 + numerodepontosturisticos2 + pibpercapita2;
+
+// Calculo super poder: "se densidade populacional 2 for menor que a densidade populacional 1" o valor da densidade é somado ao super poder da carta 2, caso contrario, é subtraído.
 
     if (densidadepopulacional2 < densidadepopulacional1)
     {
