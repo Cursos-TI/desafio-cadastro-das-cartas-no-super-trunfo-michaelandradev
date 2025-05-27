@@ -72,13 +72,13 @@ int main() {
 // Calculos - densidade populacional e PIB per Capita CARTA 1;
     densidadepopulacional1 = (float) populacao1 / area1;
     pibpercapita1 = (double) PIB1 / populacao1;
-    soma1 = (double) populacao1 + area1 + PIB1 + numerodepontosturisticos1 + pibpercapita1;
+    soma1 = (float) populacao1 + area1 + PIB1 + numerodepontosturisticos1 + pibpercapita1;
 
     if (densidadepopulacional1 < densidadepopulacional2)
     {
-        superpoder1 = (double) soma1 + densidadepopulacional1;
+        superpoder1 = (float) soma1 + densidadepopulacional1;
     } else {
-        superpoder1 = (double) soma1;
+        superpoder1 = (float) soma1 - densidadepopulacional1;
     }
 
 
@@ -108,13 +108,13 @@ int main() {
 // Calculos - densidade populacional, PIB per Capita e super poder CARTA 2;
     densidadepopulacional2 = (float) populacao2 / area2;
     pibpercapita2 = (double) PIB2 / populacao2;
-    soma2 = (double) populacao2 + area2 + PIB2 + numerodepontosturisticos2 + pibpercapita2;
+    soma2 = (float) populacao2 + area2 + PIB2 + numerodepontosturisticos2 + pibpercapita2;
 
     if (densidadepopulacional2 < densidadepopulacional1)
     {
-        superpoder2 = (double) soma2 + densidadepopulacional2;
+        superpoder2 = (float) soma2 + densidadepopulacional2;
     } else {
-        superpoder2 = (double) soma2;
+        superpoder2 = (float) soma2 - densidadepopulacional2;
     }
 
 
