@@ -70,19 +70,32 @@ int main() {
     scanf("%d", &numerodepontosturisticos1);
 
 // Calculos - densidade populacional e PIB per Capita CARTA 1;
-    densidadepopulacional1 = (float) populacao1 / area1;
-    pibpercapita1 = (double) PIB1 / populacao1;
-    soma1 = (float) populacao1 + area1 + PIB1 + numerodepontosturisticos1 + pibpercapita1;
 
-// Calculo super poder: "se densidade populacional 1 for menor que a densidade populacional 2" o valor da densidade é somado ao super poder da carta 1, caso contrario, é subtraído.
+    // Verificação de divisão por zero na densidade populacional
+    densidadepopulacional1 = (area1 > 0) ? (float)populacao1 / area1 : 0.0f;
 
-    if (densidadepopulacional1 < densidadepopulacional2)
-    {
-        superpoder1 = (float) soma1 + densidadepopulacional1;
+    // Verificação de divisão por zero no PIB per Capita
+    pibpercapita1 = (populacao1 > 0) ? (double)PIB1 / populacao1 : 0.0;
+
+    // Soma dos atributos para o Super Poder (base)
+    soma1 = (double)populacao1 + area1 + PIB1 + numerodepontosturisticos1 + pibpercapita1;
+
+    // Cálculo do inverso da densidade para Super Poder 1
+
+    double inversodensidade1 = 0.0;
+
+    if (densidadepopulacional1 == 0.0f && populacao1 == 0) {
+        inversodensidade1 = 0.0;
+
+    } else if (densidadepopulacional1 == 0.0f && populacao1 > 0) {
+        inversodensidade1 = 1000000.0;
+
     } else {
-        superpoder1 = (float) soma1 - densidadepopulacional1;
+        inversodensidade1 = 1.0 / densidadepopulacional1;
+
     }
 
+    superpoder1 = soma1 + inversodensidade1;
 
 
 // Carta 2;
@@ -108,18 +121,31 @@ int main() {
     scanf("%d", &numerodepontosturisticos2);
 
 // Calculos - densidade populacional, PIB per Capita e super poder CARTA 2;
-    densidadepopulacional2 = (float) populacao2 / area2;
-    pibpercapita2 = (double) PIB2 / populacao2;
-    soma2 = (float) populacao2 + area2 + PIB2 + numerodepontosturisticos2 + pibpercapita2;
 
-// Calculo super poder: "se densidade populacional 2 for menor que a densidade populacional 1" o valor da densidade é somado ao super poder da carta 2, caso contrario, é subtraído.
+    // Verificação de divisão por zero na densidade populacional
+    densidadepopulacional2 = (area2 > 0) ? (float)populacao2 / area2 : 0.0f;
 
-    if (densidadepopulacional2 < densidadepopulacional1)
-    {
-        superpoder2 = (float) soma2 + densidadepopulacional2;
+    // Verificação de divisão por zero no PIB per Capita
+    pibpercapita2 = (populacao2 > 0) ? (double)PIB2 / populacao2 : 0.0;
+
+    // Soma dos atributos para o Super Poder (base)
+    soma2 = (double)populacao2 + area2 + PIB2 + numerodepontosturisticos2 + pibpercapita2;
+
+    // Cálculo do inverso da densidade para Super Poder 2
+
+    double inversodensidade2 = 0.0;
+
+    if (densidadepopulacional2 == 0.0f && populacao2 == 0) {
+        inversodensidade2 = 0.0;
+
+    } else if (densidadepopulacional2 == 0.0f && populacao2 > 0) {
+        inversodensidade2 = 1000000.0;
+
     } else {
-        superpoder2 = (float) soma2 - densidadepopulacional2;
+        inversodensidade2 = 1.0 / densidadepopulacional2;
     }
+    
+    superpoder2 = soma2 + inversodensidade2;
 
 
     // Exibição dos Dados das Cartas:
